@@ -146,7 +146,7 @@ exports.signup = async (req, res) => {
 exports.adminSignup = async (req, res) => {
   try {
     const { name, email, password, campus, adminKey } = req.body;
-
+    console.log("BODY RECEIVED:", req.body)
     // Validate required fields
     if (!name || !email || !password || !campus || !adminKey) {
       return res.status(400).json({
